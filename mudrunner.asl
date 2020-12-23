@@ -1,6 +1,7 @@
 state("MudRunner")
 {
 	float levelTimer : 0xB99020; // Time after loaded in (but seems to get reset sometimes?)
+	float actualLevelTimer : 0xBA40BC; //Time whitch was played on a map, pesistent even after loading a game
 	float globalTimer : 0xBA4A60; // Total time since loading game
 	bool finished : 0xB990AC; // Have all the logs on the current level been delivered?
 	bool paused : 0xB99EFD; // Is the pause screen open?
@@ -37,5 +38,5 @@ update
 
 isLoading 
 {
-    return current.paused;
+    return current.paused || current.actualLevelTimer == old.actualLevelTimer;
 }
