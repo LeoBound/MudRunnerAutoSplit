@@ -13,11 +13,14 @@ state("MudRunner")
 startup
 {
     print("MudRunner Autosplitter v0.1");
-	
-	settings.Add("debug", false, "Debug?");
-	settings.SetToolTip("debug", "Log variables to the DebugView");
 
-	vars.loadedPrev = false;
+    settings.Add("debug", false, "Debug?");
+    settings.SetToolTip("debug", "Log variables to the DebugView");
+
+    settings.Add("autoreset", true, "Automatic reset?");
+    settings.SetToolTip("autoreset", "If true the timer will be automatically reset after a restart or leaving a level");
+	
+    vars.loadedPrev = false;
 }
 
 init 
@@ -40,7 +43,9 @@ split
 
 reset 
 {
-    return old.loadedIn != current.loadedIn;
+    if (settings["autoreset"]){
+        return old.loadedIn != current.loadedIn;
+    }
 }
 
 update 
