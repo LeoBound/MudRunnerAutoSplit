@@ -6,6 +6,7 @@ state("MudRunner")
 	bool finished : 0xB990AC; // Have all the logs on the current level been delivered?
 	bool guiOpen : 0xB9A0BD; // Seems to be if a GUI is open?
 	bool paused : 0xBA3F5D; // Is the pause screen open or has a challenge been completed?
+	bool paused2 : 0xB99EFD; // Another paused address.
 	bool loadedIn : 0xB9C9D5; // Has the game loaded in?
 }
 
@@ -50,5 +51,5 @@ update
 
 isLoading 
 {
-    return current.paused; //|| current.levelTimer == old.levelTimer; //Ends up being constantly paused at high FPS
+    return current.paused || current.paused2; //|| current.levelTimer == old.levelTimer; //Ends up being constantly paused at high FPS
 }
