@@ -3,37 +3,51 @@
   <CheatEntries>
     <CheatEntry>
       <ID>4</ID>
-      <Description>"MapTimer"</Description>
+      <Description>"LevelTimer(Pauses On Map, Not Consistent)"</Description>
+      <LastState Value="3.052011967" RealAddress="7FF700709020"/>
       <VariableType>Float</VariableType>
       <Address>MudRunner.exe+B99020</Address>
     </CheatEntry>
     <CheatEntry>
       <ID>6</ID>
-      <Description>"MapTimer2"</Description>
+      <Description>"LevelTimer (Also Inconsistent)"</Description>
+      <LastState Value="5.523288727" RealAddress="7FF7007140BC"/>
       <VariableType>Float</VariableType>
       <Address>MudRunner.exe+BA40BC</Address>
     </CheatEntry>
     <CheatEntry>
       <ID>23</ID>
       <Description>"Loaded In?"</Description>
+      <LastState Value="2" RealAddress="7FF70070C9D5"/>
       <VariableType>Byte</VariableType>
       <Address>MudRunner.exe+B9C9D5</Address>
     </CheatEntry>
     <CheatEntry>
       <ID>7</ID>
       <Description>"Total Game Time (with menu)"</Description>
+      <LastState Value="125.7095795" RealAddress="7FF700714A60"/>
       <VariableType>Float</VariableType>
       <Address>MudRunner.exe+BA4A60</Address>
     </CheatEntry>
     <CheatEntry>
-      <ID>9</ID>
-      <Description>"Paused?"</Description>
+      <ID>10</ID>
+      <Description>"isGUIopen?"</Description>
+      <LastState Value="2" RealAddress="7FF70070A0BD"/>
       <VariableType>Byte</VariableType>
-      <Address>MudRunner.exe+B99EFD</Address>
+      <Address>MudRunner.exe+B9A0BD</Address>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>13</ID>
+      <Description>"Paused"</Description>
+      <LastState Value="2" RealAddress="7FF700713F5D"/>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>Byte</VariableType>
+      <Address>MudRunner.exe+BA3F5D</Address>
     </CheatEntry>
     <CheatEntry>
       <ID>8</ID>
       <Description>"Game finished?"</Description>
+      <LastState Value="0" RealAddress="7FF7007090AC"/>
       <ShowAsSigned>0</ShowAsSigned>
       <VariableType>Byte</VariableType>
       <Address>MudRunner.exe+B990AC</Address>
@@ -45,40 +59,39 @@
       <GroupHeader>1</GroupHeader>
       <CheatEntries>
         <CheatEntry>
-          <ID>13</ID>
-          <Description>"No description"</Description>
-          <VariableType>Byte</VariableType>
-          <Address>MudRunner.exe+BA3F5D</Address>
-        </CheatEntry>
-        <CheatEntry>
           <ID>15</ID>
           <Description>"No description"</Description>
+          <LastState Value="2" RealAddress="7FF7007140B5"/>
           <VariableType>Byte</VariableType>
           <Address>MudRunner.exe+BA40B5</Address>
         </CheatEntry>
         <CheatEntry>
-          <ID>10</ID>
-          <Description>"No description"</Description>
-          <VariableType>Byte</VariableType>
-          <Address>MudRunner.exe+B9A0BD</Address>
-        </CheatEntry>
-        <CheatEntry>
           <ID>11</ID>
           <Description>"No description"</Description>
+          <LastState Value="2" RealAddress="7FF700713E7D"/>
           <VariableType>Byte</VariableType>
           <Address>MudRunner.exe+BA3E7D</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>12</ID>
           <Description>"No description"</Description>
+          <LastState Value="2" RealAddress="7FF700713F45"/>
           <VariableType>Byte</VariableType>
           <Address>MudRunner.exe+BA3F45</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>14</ID>
           <Description>"No description"</Description>
+          <LastState Value="2" RealAddress="7FF700713F65"/>
           <VariableType>Byte</VariableType>
           <Address>MudRunner.exe+BA3F65</Address>
+        </CheatEntry>
+        <CheatEntry>
+          <ID>9</ID>
+          <Description>"Paused?"</Description>
+          <LastState Value="2" RealAddress="7FF700709EFD"/>
+          <VariableType>Byte</VariableType>
+          <Address>MudRunner.exe+B99EFD</Address>
         </CheatEntry>
       </CheatEntries>
     </CheatEntry>
@@ -91,42 +104,42 @@
         <CheatEntry>
           <ID>19</ID>
           <Description>"No description"</Description>
+          <LastState Value="2" RealAddress="7FF70070900D"/>
           <VariableType>Byte</VariableType>
           <Address>MudRunner.exe+B9900D</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>20</ID>
           <Description>"No description"</Description>
+          <LastState Value="2" RealAddress="7FF7007090CD"/>
           <VariableType>Byte</VariableType>
           <Address>MudRunner.exe+B990CD</Address>
         </CheatEntry>
         <CheatEntry>
-          <ID>22</ID>
-          <Description>"No description"</Description>
-          <VariableType>Byte</VariableType>
-          <Address>MudRunner.exe+B9BBA5</Address>
-        </CheatEntry>
-        <CheatEntry>
           <ID>24</ID>
           <Description>"No description"</Description>
+          <LastState Value="2" RealAddress="7FF700713E5D"/>
           <VariableType>Byte</VariableType>
           <Address>MudRunner.exe+BA3E5D</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>25</ID>
           <Description>"No description"</Description>
+          <LastState Value="2" RealAddress="7FF700713E65"/>
           <VariableType>Byte</VariableType>
           <Address>MudRunner.exe+BA3E65</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>27</ID>
           <Description>"No description"</Description>
+          <LastState Value="2" RealAddress="7FF700713EBD"/>
           <VariableType>Byte</VariableType>
           <Address>MudRunner.exe+BA3EBD</Address>
         </CheatEntry>
         <CheatEntry>
           <ID>28</ID>
           <Description>"No description"</Description>
+          <LastState Value="2" RealAddress="7FF700713F4D"/>
           <VariableType>Byte</VariableType>
           <Address>MudRunner.exe+BA3F4D</Address>
         </CheatEntry>

@@ -4,7 +4,8 @@ state("MudRunner")
 	float levelTimer : 0xBA40BC; //Time which was played on a map, pesistent even after loading a game
 	float globalTimer : 0xBA4A60; // Total time since loading game
 	bool finished : 0xB990AC; // Have all the logs on the current level been delivered?
-	bool paused : 0xB99EFD; // Is the pause screen open?
+	bool guiOpen : 0xB9A0BD; // Seems to be if a GUI is open?
+	bool paused : 0xBA3F5D; // Is the pause screen open or has a challenge been completed?
 	bool loadedIn : 0xB9C9D5; // Has the game loaded in?
 }
 
@@ -38,17 +39,16 @@ split
 
 reset 
 {
-    return old.loadedIn == current.loadedIn;
+    return old.loadedIn != current.loadedIn;
 }
 
 update 
 {
-	//Pls add interpolated strings devs thx
-    vars.debugPrinter("Loaded? " + current.loadedIn + ", Current Time: " + current.levelTimer + ", isPaused? " + current.paused + ", isFinished? " + current.finished);
+    vars.debugPrinter("Loaded? " + old.loadedIn + current.loadedIn + ", Current Time: " + current.levelTimer + ", isPaused? " + current.paused + ", isFinished? " + current.finished);	 //Pls add interpolated strings devs thx
 }
 
 
 isLoading 
 {
-    return current.paused //|| current.levelTimer == old.levelTimer; Ends up being constantly paused at high FPS
+    return current.paused; //|| current.levelTimer == old.levelTimer; //Ends up being constantly paused at high FPS
 }
