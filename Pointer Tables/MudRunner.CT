@@ -93,6 +93,49 @@
           <VariableType>Byte</VariableType>
           <Address>MudRunner.exe+B99EFD</Address>
         </CheatEntry>
+        
+    <CheatEntry>
+      <ID>17</ID>
+      <Description>"#1 0=game, 1=ESC, 2=Modal"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"MudRunner.exe"+00B98FA8</Address>
+      <Offsets>
+        <Offset>78</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>18</ID>
+      <Description>"#1 0=game, 1=ESC, 2=Modal (alternative)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"MudRunner.exe"+00B9C3C8</Address>
+      <Offsets>
+        <Offset>80</Offset>
+        <Offset>18</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>19</ID>
+      <Description>"#2 0=game, 1=ESC, 2=Modal"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"MudRunner.exe"+00B98FA8</Address>
+      <Offsets>
+        <Offset>7C</Offset>
+      </Offsets>
+    </CheatEntry>
+    <CheatEntry>
+      <ID>20</ID>
+      <Description>"#2 0=game, 1=ESC, 2=Modal (alternative)"</Description>
+      <ShowAsSigned>0</ShowAsSigned>
+      <VariableType>4 Bytes</VariableType>
+      <Address>"MudRunner.exe"+00B9C3C8</Address>
+      <Offsets>
+        <Offset>84</Offset>
+        <Offset>18</Offset>
+      </Offsets>
+    </CheatEntry>
       </CheatEntries>
     </CheatEntry>
     <CheatEntry>
