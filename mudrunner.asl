@@ -40,8 +40,12 @@ split
 {
     // return current.finished; // Code splits way to often at finish screen, this is problematic if you try to run multiple maps
     
-    if (current.finished && !(current.paused || current.paused2) && vars.lastSplitTime.AddMinutes(1) < DateTime.UtcNow) {
-        //only allow to split once every minute and unpaused, so the speedrunner has 1 minute to leave the finish screen
+    if ( // Split if:
+        current.finished // map is finished ...
+        && current.loadedIn // ... and map is loaded (prevents accidental splits at the start of the next level after finishing a map)...
+        && !(current.paused || current.paused2) // ... and game is not paused (prevents accidental splits at the menu screen after finishing a level) ...
+        && vars.lastSplitTime.AddMinutes(1) < DateTime.UtcNow // ... and the last split was not done within the last minute (prevents multiple splits at the finish screen for 1 minute)
+    ){
         vars.lastSplitTime = DateTime.UtcNow;
         return true;
     }
