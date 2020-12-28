@@ -8,6 +8,7 @@ state("MudRunner")
     bool paused : 0xBA3F5D; // Is the pause screen open or has a challenge been completed?
     bool paused2 : 0xB99EFD; // Another paused address.
     bool loadedIn : 0xB9C9D5; // Has the game loaded in?
+    byte challengeOverlayOpen: 0xB990D5; // Tutorial or finish screen overlay state (0=overlay not visible, known other states: 1,2) 
 }
 
 startup
@@ -41,7 +42,7 @@ split
     // return current.finished; // Code splits way to often at finish screen, this is problematic if you try to run multiple maps
     
     if ( // Split if:
-        current.finished // map is finished ...
+        (current.finished || current.challengeOverlayOpen != 0) // map or challenge is finished ...
         && current.loadedIn // ... and map is loaded (prevents accidental splits at the start of the next level after finishing a map)...
         && !(current.paused || current.paused2) // ... and game is not paused (prevents accidental splits at the menu screen after finishing a level) ...
         && vars.lastSplitTime.AddMinutes(1) < DateTime.UtcNow // ... and the last split was not done within the last minute (prevents multiple splits at the finish screen for 1 minute)
@@ -67,5 +68,5 @@ update
 isLoading 
 {
     //Note: current.levelTimer == old.levelTimer ends up being constantly paused at high FPS
-    return current.paused || current.paused2 || current.finished; 
+    return current.paused || current.paused2 || current.finished || current.challengeOverlayOpen != 0; 
 }
