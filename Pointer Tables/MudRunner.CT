@@ -53,6 +53,13 @@
       <Address>MudRunner.exe+B990AC</Address>
     </CheatEntry>
     <CheatEntry>
+      <ID>29</ID>
+      <Description>"Challenge finished or overlay open?"</Description>
+      <LastState Value="0" RealAddress="7FF6033790D5"/>
+      <VariableType>Byte</VariableType>
+      <Address>MudRunner.exe+B990D5</Address>
+    </CheatEntry>
+    <CheatEntry>
       <ID>17</ID>
       <Description>"More Paused Addrs"</Description>
       <LastState Value="" RealAddress="00000000"/>
